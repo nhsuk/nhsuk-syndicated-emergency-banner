@@ -1,0 +1,44 @@
+{
+  "name": "nhsuk_syndicated_emergency_banner",
+  "version": "0.0.1",
+  "description": "Codebase for syndicated NHS UK emergency banner.",
+  "repository": "https://github.com/nhsuk/nhsuk-syndicated-emergency-banner",
+  "main": "banner.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "npm run lint && npm run jest",
+    "lint": "eslint .",
+    "jest": "jest -c jest.config.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "core-js": "^3.6.4",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-nhsuk": "^1.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-sass": "^4.0.2",
+    "html-loader": "^0.5.5",
+    "husky": "^4.2.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "nhsuk-frontend": "^3.0.2",
+    "sass-loader": "^8.0.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
+  }
+}

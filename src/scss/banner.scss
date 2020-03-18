@@ -1,0 +1,60 @@
+@import 'node_modules/nhsuk-frontend/packages/core/settings/all';
+
+.nhsuk-banner {
+	background-color: $color_nhsuk-yellow;
+	padding: 16px;
+
+	@media (min-width: 40.0625em) {
+		padding: 24px 32px;
+	}
+
+	h2 {
+		display: block; 
+		font-size: 24px;
+	    line-height: 1.33333; 
+		margin: 0;
+		padding: 0;
+	}
+
+	p {
+		display: block; 
+		font-size: 16px;
+		line-height: 1.5;
+		margin: 8px 0 0;
+		padding: 0;
+
+		@media (min-width: 40.0625em) {
+			font-size: 19px;
+		}
+	}
+
+	a {
+		color: $nhsuk-link-color;
+		text-decoration: none;
+  
+		&:focus {
+			background-color: $color_shade_nhsuk-blue-35;
+			box-shadow: 0 0 0 4px $color_shade_nhsuk-blue-35;
+			color: $color_nhsuk-white;
+			outline: $nhsuk-focus-width solid transparent;
+			outline-offset: $nhsuk-focus-width;
+		}
+	
+		&:hover {
+			background-color: $color_nhsuk-blue;
+			box-shadow: 0 0 0 4px $color_nhsuk-blue;
+			color: $color_nhsuk-white;
+		}
+	
+		&:active {
+			background-color: $color_shade_nhsuk-blue-50;
+			box-shadow: 0 0 0 4px $color_shade_nhsuk-blue-35;
+			color: $color_nhsuk-white;
+		}
+	}
+}
+
+.nhsuk-banner__content {
+	max-width: 960px;
+	margin: auto;
+}

@@ -1,0 +1,11 @@
+{
+	"@context": "http://schema.org/",
+	"@type": "Message",
+	"about": {
+		"@type": "Thing",
+		"name": "NHS.UK alert banner for third-parties"
+	},
+	"dateModified": "2020-03-17",
+	"headline": "Coronavirus (COVID-19)",
+	"text": "<p>For health information and advice, read our pages on <a href=\"https://www.nhs.uk/conditions/coronavirus-covid-19/\">coronavirus</a>. Learn about the <a href=\"https://gov.uk/coronavirus\">government response to coronavirus on GOV.UK</a>.</p>"
+}
