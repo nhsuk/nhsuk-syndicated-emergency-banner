@@ -1,5 +1,7 @@
 # NHS UK Syndicated Emergency Banner
 
+![Push](https://github.com/nhsuk/nhsuk-syndicated-emergency-banner/workflows/Push/badge.svg?event=push)
+
 Codebase for syndicated NHS UK emergency banner.
 
 ## Usage
