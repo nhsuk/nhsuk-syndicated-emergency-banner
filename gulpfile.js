@@ -83,6 +83,7 @@ gulp.task('default', () => {
   gulp.watch('./dist/*').on('change', browserSync.reload);
 });
 
-gulp.task('build', () => {
+gulp.task('build', (done) => {
   webpackJS();
+  done();
 });
