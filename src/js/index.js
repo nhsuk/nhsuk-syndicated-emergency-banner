@@ -68,7 +68,7 @@ export const insertBanner = (apiData, options) => {
  * @param {Options} - options
  * @returns {void}
  */
-window.NHSUKBannerInit = (options = {}) => {
+window.NHSUKBannerInit = (options) => {
   // Merge user options with defaults
   const mergedOptions = {
     ...defaultOptions,
@@ -79,7 +79,7 @@ window.NHSUKBannerInit = (options = {}) => {
     // Make request to banner api when page has loaded
     document.addEventListener('DOMContentLoaded', () => {
       const request = new XMLHttpRequest();
-      request.open('GET', `https://api.nhs.uk/banner/?url=${options.url}`, true);
+      request.open('GET', `https://api.nhs.uk/banner/?url=${mergedOptions.url}`, true);
 
       request.onreadystatechange = () => {
         if (request.readyState === 4) {
