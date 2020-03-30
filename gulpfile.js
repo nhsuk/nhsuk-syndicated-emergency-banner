@@ -16,8 +16,15 @@ function compileCSS() {
 
 // Transpile ES6 code and import HTML and SCSS
 function webpackJS() {
-  return gulp.src('src/js/index.js')
+  return gulp.src([
+    'src/emergency-banner/js/emergency-banner.js',
+    'src/coronavirus-panel/js/coronavirus-panel.js',
+  ])
     .pipe(webpack({
+      entry: {
+        coronavirusPanel: './src/coronavirus-panel/js/coronavirus-panel.js',
+        emergencyBanner: './src/emergency-banner/js/emergency-banner.js',
+      },
       mode: 'production',
       module: {
         rules: [{
@@ -50,7 +57,7 @@ function webpackJS() {
         }],
       },
       output: {
-        filename: 'banner.js',
+        filename: '[name].js',
       },
       target: 'web',
     }))

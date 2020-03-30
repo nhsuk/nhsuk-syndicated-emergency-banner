@@ -1,5 +1,5 @@
-import banner from '../html/banner.html';
-import styles from '../scss/banner.scss';
+import banner from '../html/emergency-banner.html';
+import styles from '../scss/emergency-banner.scss';
 
 /**
  * API schema - excluding schema specific properties
@@ -17,7 +17,7 @@ import styles from '../scss/banner.scss';
  * @property {string} selector - CSS selector for banners element parent element
  */
 export const defaultOptions = {
-  selector: '.nhsuk-banner-render',
+  selector: '.nhsuk-emergency-banner-render',
   url: window.location.href,
 };
 
@@ -68,7 +68,7 @@ export const insertBanner = (apiData, options) => {
  * @param {Options} - options
  * @returns {void}
  */
-window.NHSUKBannerInit = (options) => {
+window.NHSUKEmergencyBannerInit = (options) => {
   // Merge user options with defaults
   const mergedOptions = {
     ...defaultOptions,

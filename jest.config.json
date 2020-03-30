@@ -1,11 +1,11 @@
 {
   "collectCoverage": true,
   "collectCoverageFrom": [
-    "src/js/*.js",
+    "src/**/*.js",
     "!src/js/polyfills.js"
   ],
   "moduleNameMapper": {
-    "\\.(html)$": "<rootDir>/__mocks__/output.js",
+    "\\.(html)$": "<rootDir>/__mocks__/emergency-banner/output.js",
     "\\.(scss)$": "<rootDir>/__mocks__/sassMock.js"
   },
   "rootDir": "."

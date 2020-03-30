@@ -1,0 +1,84 @@
+@import 'node_modules/nhsuk-frontend/packages/core/settings/all';
+
+$breakpoint: 40.0625em;
+
+.nhsuk-coronavirus-banner {
+  display: block;
+  border: solid 3px $color_nhsuk-blue;
+  width: 100%;
+  background: $color_nhsuk-white;
+  text-decoration: none;
+  max-width: 300px;
+
+  &:hover, &:focus {
+    background: $color_nhsuk-white;
+    border: solid 3px $color_nhsuk-yellow;
+
+    p {
+      text-decoration: underline;
+    }
+  }
+
+  &:visited {
+    color: inherit;
+  }
+
+  @media (min-width: $breakpoint) {  
+    display: table;
+    max-width: 800px;
+  }
+
+  &-text {
+    display: block;
+    padding: 21px 25px;
+
+    @media (min-width: $breakpoint) { 
+      display: table-cell;
+      padding: 13px 21px;
+      vertical-align: middle;
+    }
+
+    p {
+      color: #212b32;
+      font-weight: 600;
+      font-size: 21px;
+      margin: 0 0 40px;
+  
+      @media (min-width: $breakpoint) {  
+        max-width: 420px;
+        margin: 0;
+      }
+    }
+    
+    &-url {
+      color: $color_nhsuk-blue;
+      text-decoration: underline;
+    }
+  }
+
+  &-logo {
+    display: block;
+    padding: 16px 25px 8px;
+    background: $color_nhsuk-blue;
+
+    @media (min-width: $breakpoint) {
+      width: 120px;
+      display: table-cell;
+      padding: 13px 21px 8px;
+      vertical-align: middle;
+    }
+
+    &-svg {
+      display: block;
+      height: 30px;
+      margin-bottom: 5px;
+    }
+    
+    &-org {
+      color: $color_nhsuk-white;
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 0;
+    }
+  }
+}
