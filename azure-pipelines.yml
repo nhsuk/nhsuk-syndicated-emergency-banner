@@ -22,7 +22,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-      sourceFolder: $(Build.SourcesDirectory)/dist
+      sourceFolder: $(Build.SourcesDirectory)\dist
       targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
@@ -32,7 +32,7 @@ steps:
 
 - task: AzureFileCopy@4
   inputs:
-    SourcePath: '$(Build.ArtifactStagingDirectory)/_nhsuk.nhsuk-syndicated-emergency-banner/dist/'
+    SourcePath: '$(Build.ArtifactStagingDirectory)\_nhsuk.nhsuk-syndicated-emergency-banner/dist/'
     azureSubscription: 'nhsuk-development (07748954-52d6-46ce-95e6-2701bfc715b4)'
     Destination: 'AzureBlob'
     storage: 'syndicatedbanner'
