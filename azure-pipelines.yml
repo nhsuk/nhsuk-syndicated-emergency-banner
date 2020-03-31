@@ -22,7 +22,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-      sourceFolder: $(Build.SourcesDirectory)/dist
+      sourceFolder: $(Agent.BuildDirectory)/dist
       targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
@@ -37,3 +37,5 @@ steps:
     Destination: 'AzureBlob'
     storage: 'syndicatedbanner'
     ContainerName: 'banner'
+
+    
