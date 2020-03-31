@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
 - task: NodeTool@0
@@ -29,4 +29,11 @@ steps:
   inputs:
     pathtoPublish: $(Build.ArtifactStagingDirectory)
     artifactName: dist
-    
+
+- task: AzureFileCopy@4
+  inputs:
+    SourcePath: '$(Build.ArtifactStagingDirectory)/_nhsuk.nhsuk-syndicated-emergency-banner/dist/'
+    azureSubscription: 'nhsuk-development (07748954-52d6-46ce-95e6-2701bfc715b4)'
+    Destination: 'AzureBlob'
+    storage: 'syndicatedbanner'
+    ContainerName: 'banner' 
