@@ -76,13 +76,13 @@ $breakpoint: 40.0625em;
 
   &-logo {
     display: block;
-    padding: 16px 25px 8px;
+    padding: 16px 25px;
     background: $color_nhsuk-blue;
 
     @media (min-width: $breakpoint) {
       width: 120px;
       display: table-cell;
-      padding: 13px 21px 8px;
+      padding: 13px 21px;
       vertical-align: middle;
     }
 
@@ -96,7 +96,6 @@ $breakpoint: 40.0625em;
       color: $color_nhsuk-white;
       font-weight: 600;
       text-decoration: none;
-      line-height: 0;
     }
   }
 }
