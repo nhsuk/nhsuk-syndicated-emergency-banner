@@ -22,12 +22,12 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: 'dist/**'
     targetFolder: $(Build.ArtifactStagingDirectory)
+    
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: $(Build.ArtifactStagingDirectory)
-    artifactName: MyBuildOutputs
+    artifactName: build
     
 - task: AzureFileCopy@4
   inputs:
